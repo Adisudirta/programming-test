@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [BookController::class, 'listBook']);
 Route::post('/', [BookController::class, 'filter']);
+
+Route::get('/top', [BookController::class, 'topAuthor']);

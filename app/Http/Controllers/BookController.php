@@ -49,4 +49,19 @@ class BookController extends Controller
 
         return view('books', ['data' => $data]);
     }
+
+    public function topAuthor()
+    {
+        $books = Book::all()->sortByDesc('voters')->take(10);
+
+        $data = [];
+        foreach ($books as $book) {
+            $data[] = [
+                'author' => $book->author->name,
+                'voters' => $book->voters,
+            ];
+        }
+
+        return view('top', ['data' => $data]);
+    }
 }

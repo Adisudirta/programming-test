@@ -5,7 +5,7 @@
         </div>
 
         <div class="px-[20px] py-[10px] rounded bg-green-500 shadow-sm">
-            <a class="text-white" href="/">Top 10 Books</a>
+            <a class="text-white" href="/top">Top 10 Authors</a>
         </div>
 
         <div class="px-[20px] py-[10px] rounded bg-green-500 shadow-sm">
