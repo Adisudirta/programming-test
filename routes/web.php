@@ -18,3 +18,6 @@ Route::get('/', [BookController::class, 'listBook']);
 Route::post('/', [BookController::class, 'filter']);
 
 Route::get('/top', [BookController::class, 'topAuthor']);
+
+Route::get('/insert', [BookController::class, 'loadFormInsertRating']);
+Route::post('/insert', [BookController::class, 'InsertRating']);

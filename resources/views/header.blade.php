@@ -9,7 +9,7 @@
         </div>
 
         <div class="px-[20px] py-[10px] rounded bg-green-500 shadow-sm">
-            <a class="text-white" href="/">Input Rating</a>
+            <a class="text-white" href="/insert">Insert Rating</a>
         </div>
     </div>
 </header>

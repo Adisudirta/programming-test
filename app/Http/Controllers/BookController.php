@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Author;
 use App\Models\Book;
 use App\Models\Rating;
 use Illuminate\Http\Request;
@@ -63,5 +64,22 @@ class BookController extends Controller
         }
 
         return view('top', ['data' => $data]);
+    }
+
+    public function loadFormInsertRating()
+    {
+        $authors = Author::all()->take(10);
+        $books = Book::all()->take(10);
+
+        return view('insert', ['authors' => $authors, 'books' => $books]);
+    }
+
+    public function insertRating(Request $request)
+    {
+        $book = Book::find($request->title);
+        $book->voters = $book->voters + $request->rating;
+        $book->update();
+
+        return redirect('/');
     }
 }
